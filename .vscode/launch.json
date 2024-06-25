@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "perl",
+        "request": "launch",
+        "name": "Perl CGI",
+        "program": "${workspaceFolder}/cgi-bin/index.cgi",
+        "args": [],
+        "cwd": "${workspaceFolder}/cgi-bin",
+        "console": "integratedTerminal",
+        "externalConsole": false,
+        "env": {}
+      }
+    ]
+  }
+  

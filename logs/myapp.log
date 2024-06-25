@@ -1,0 +1,4 @@
+[2024/06/25 19:44:17] [DEBUG] HomeController.pm:26 - Handling request
+[2024/06/25 19:44:17] [DEBUG] HomeController.pm:43 - Processing request
+[2024/06/25 19:44:17] [INFO] HomeController.pm:52 - User is not logged in
+[2024/06/25 19:44:17] [DEBUG] HomeController.pm:98 - Displaying login form

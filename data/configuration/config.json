@@ -1,0 +1,7 @@
+{
+    "data_dirs": {
+      "tasks": "P:/Projects/Learning/perlOO/MyMVCApp/data/tasks",
+      // Add more directories as needed
+    },
+  }
+  
