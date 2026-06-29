@@ -1,21 +1,20 @@
-# tests/util/files.t
+#!/usr/bin/perl
 
 use strict;
 use warnings;
-use Test::More;
-
-use FindBin qw($Bin);
+use FindBin;
 use File::Spec;
-use lib 'lib';
+use Cwd qw(abs_path);
+use lib "$FindBin::Bin/../../lib";
+use Test::More;
 use MyApp::Util::Files;
 
-# Test 1: Test get_relative_path function
 subtest 'get_relative_path' => sub {
-    my $test_file = 'data/configuration/log4perl.conf';
-    my $expected_path = File::Spec->catfile($Bin, '../../', $test_file);
+    my $test_file     = 'cpanfile';
+    my $expected_path = abs_path( File::Spec->catfile( $FindBin::Bin, '../../', $test_file ) );
     my $resolved_path = MyApp::Util::Files::get_relative_path($test_file);
 
-    is($resolved_path, $expected_path, "Resolved path matches expected");
+    is( $resolved_path, $expected_path, 'Resolved path matches expected project root file' );
 };
 
 done_testing();

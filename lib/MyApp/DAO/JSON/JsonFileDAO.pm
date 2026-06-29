@@ -5,13 +5,12 @@ use warnings;
 use JSON::MaybeXS;
 use File::Spec;
 use Log::Log4perl;
-Log::Log4perl->init('data/configuration/log4perl.conf');
-# Get the logger instance
-my $logger = Log::Log4perl->get_logger();
+
+my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
 sub new {
     my ($class, $dir) = @_;
-    die "Directory not provided" unless $dir;
+    die 'Directory not provided' unless $dir;
 
     my $self = {
         directory => $dir,
@@ -31,17 +30,17 @@ sub read_json {
         my $json_string = <$fh>;
         close $fh;
 
-        return JSON->new->utf8->decode($json_string);
-    } else {
-        return {};  # Return an empty hashref if file doesn't exist
+        return JSON::MaybeXS->new(utf8 => 1)->decode($json_string);
     }
+
+    return {};
 }
 
 sub write_json {
     my ($self, $file_name, $data) = @_;
     my $file_path = $self->_get_file_path($file_name);
 
-    my $json = JSON->new->utf8->canonical(1);
+    my $json = JSON::MaybeXS->new(utf8 => 1, canonical => 1);
     my $json_string = $json->encode($data);
 
     open my $fh, '>:encoding(utf8)', $file_path or die "Cannot open file $file_path: $!";
@@ -54,4 +53,4 @@ sub _get_file_path {
     return File::Spec->catfile($self->{directory}, $file_name);
 }
 
-1;  # End of package
+1;
