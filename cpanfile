@@ -5,6 +5,7 @@ requires 'CGI::Session';
 requires 'Log::Log4perl';
 requires 'JSON::MaybeXS';
 requires 'HTML::Entities';
+requires 'Digest::SHA';
 
 on 'test' => sub {
     requires 'Test::More';
