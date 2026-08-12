@@ -1,0 +1,18 @@
+{
+    "data_source": "sqlite",
+    "databases": {
+        "sqlite": {
+            "file": "data/sqlite/app.db"
+        },
+        "mariadb": {
+            "dsn": "dbi:mysql:database=multiapp;host=127.0.0.1",
+            "user": "multiapp",
+            "password": "changeme"
+        }
+    },
+    "api": {
+        "base_url": "https://jsonplaceholder.typicode.com",
+        "resource": "todos",
+        "timeout": 10
+    }
+}

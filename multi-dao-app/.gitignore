@@ -1,0 +1,5 @@
+data/sessions/*
+!data/sessions/.gitkeep
+data/sqlite/*
+!data/sqlite/.gitkeep
+logs/*.log

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 420px;
+}
+
+.container.wide {
+    max-width: 900px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.error {
+    color: #b00020;
+    background: #fdecea;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.dashboard-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.source-panel,
+.task-panel {
+    margin-bottom: 2rem;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    background: #e0e0e0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.badge-sqlite { background: #c8e6c9; }
+.badge-mariadb { background: #bbdefb; }
+.badge-api { background: #ffe0b2; }
+
+.task-form,
+.source-form {
+    margin-bottom: 1rem;
+}
+
+.task-form input[type="text"] {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.task-table th {
+    background: #fafafa;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.actions form {
+    margin-right: 0.25rem;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
