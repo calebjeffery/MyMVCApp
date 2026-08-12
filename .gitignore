@@ -1,3 +1,12 @@
 data/sessions/*
 !data/sessions/.gitkeep
 logs/*.log
+data/files/*
+!data/files/.gitkeep
+data/external_storage/*
+!data/external_storage/.gitkeep
+data/test/file_service/
+data/test/storage/
+frontend/node_modules/
+public_html/app/
+local/

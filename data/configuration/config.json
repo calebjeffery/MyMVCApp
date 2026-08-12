@@ -1,5 +1,25 @@
 {
     "data_dirs": {
         "tasks": "data/tasks"
+    },
+    "external_storage_dir": "data/external_storage",
+    "file_storage": {
+        "default_provider": "system_io",
+        "providers": {
+            "system_io": {
+                "root_dir": "data/files"
+            },
+            "aws_s3": {
+                "enabled": false,
+                "bucket": "",
+                "region": "us-east-1"
+            },
+            "microsoft_graph": {
+                "enabled": false,
+                "drive_id": "",
+                "tenant_id": "",
+                "client_id": ""
+            }
+        }
     }
 }
